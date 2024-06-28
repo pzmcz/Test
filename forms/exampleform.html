@@ -1,0 +1,101 @@
+<html lang="en"><head>
+    <base target="_blank">  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        /* Reset some default styles in browsers */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    
+        /* Style the body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #808080; /* Updated background color */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 20px;
+            overflow: hidden; /* Remove scrollbar */
+        }
+    
+        /* Style the form */
+        form {
+            background-color: #777777;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+    
+        /* Style the label */
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #333;
+        }
+    
+        /* Style the input field */
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+    
+        /* Style the button */
+        button[type="submit"] {
+            background-color: #606060; /* Updated background color */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    
+        /* Change button color on hover */
+        button[type="submit"]:hover {
+            background-color: #505050; /* Updated hover background color */
+        }
+    </style>
+</head>
+<body>
+
+    <script type="text/javascript">
+    function redirect() {
+        setTimeout(function() {
+           window.location = 'https://forms.vortexbot.xyz/submitted';
+        }, 100);
+    }
+
+    function onFormSubmit() {
+        submitted = true;
+        setTimeout(function() {
+            document.getElementById('shittyahh').disabled = true;
+            document.getElementById('submitButton').style.display = 'none';
+            document.getElementById('labelText').textContent = 'Form submitted successfully.';
+            redirect();
+        }, 100); // Delay the changes by 100 milliseconds
+    }
+</script>
+
+
+
+<script type="text/javascript">var submitted=false</script>
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {redirect();}"></iframe>
+<form action="https://docs.google.com/forms/d/e/1FAIpQLSeM2H7ANFuiuc_NTBZQ963tGgcUKGDBndYxB5L1loir4mL7rw/formResponse" method="post" target="hidden_iframe" onsubmit="onFormSubmit();">
+    <label id="labelText" for="entry.34612927">Very shitty example tbh change this and make it look good.</label>
+    <input id="shittyahh" type="text" name="entry.735087983" required="">
+    <button id="submitButton" type="submit">Submit Form</button>
+</form>
+
+
+</body></html>
